@@ -207,16 +207,41 @@ function App() {
     </p>
 
     {/* Email Button */}
-    <HoverButton onClick={() => window.location.href = "mailto:your@email.com"}>
-  Say Hello
-</HoverButton>
+    <a href="mailto:furtado.adolf06@gmail.com">
+  <HoverButton>Say Hello</HoverButton>
+</a>
 
     {/* Social Links */}
-    <div className="flex justify-center gap-6 mt-8 text-gray-400">
-      <a href="#" className="hover:text-white transition">GitHub</a>
-      <a href="#" className="hover:text-white transition">LinkedIn</a>
-      <a href="#" className="hover:text-white transition">Instagram</a>
-    </div>
+   <div className="flex justify-center gap-6 mt-8 text-gray-400">
+
+  <a 
+    href="https://github.com/AdolfFurtado06"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    GitHub
+  </a>
+
+  <a 
+    href="https://www.linkedin.com/in/adolf-furtado-9857a3357"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    LinkedIn
+  </a>
+
+  <a 
+    href="https://www.instagram.com/adolf_furtado/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    Instagram
+  </a>
+
+</div>
 
   </div>
 </section>
