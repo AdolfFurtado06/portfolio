@@ -167,11 +167,11 @@ const skillCategories = [
       {skillCategories.map((category, i) => (
         <div key={i}>
 
-          <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
+          <h3 className="text-lg md:text-xl font-medium mb-6 text-gray-400 tracking-wide">
             {category.title}
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
 
             {category.skills.map((skill, j) => (
              <motion.div
@@ -180,11 +180,11 @@ const skillCategories = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: j * 0.1 }}
                  viewport={{ once: true }}
-                 className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
+                 className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
               >
                 
                 {/* Glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-2xl opacity-30"></div>
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center gap-3">
@@ -192,12 +192,11 @@ const skillCategories = [
                   {/* Icon */}
                     <div className="text-3xl transition group-hover:scale-110 relative">
                       {skill.icon}
-
-                     {/* Tooltip */}
-                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs bg-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
-                      {skill.name}
-                    </span>
                    </div>
+                    <p className="text-sm text-gray-400 group-hover:text-white transition">
+                       {skill.name}
+                     </p>
+
 
                   </div>
 
