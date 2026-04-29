@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import HoverButton from "./components/HoverButton";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaPython } from "react-icons/fa";
+import { SiTailwindcss, SiPostgresql } from "react-icons/si";
 import StreakBackground from "./components/StreakBackground";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -43,13 +43,69 @@ function TypingText({ words }) {
 
 function App() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
-  const skills = [
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
-  { name: "JavaScript", icon: <FaJs /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Tailwind", icon: <SiTailwindcss /> },
-  { name: "Git", icon: <FaGitAlt /> },
+const skillCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+    ],
+  },
+  {
+    title: "Backend / Languages",
+    skills: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: <FaGitAlt /> }<div className="space-y-12">
+
+  {skillCategories.map((category, i) => (
+    <div key={i}>
+
+      <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
+        {category.title}
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+        {category.skills.map((skill, j) => (
+          <div
+            key={j}
+            className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
+          >
+            
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+
+            <div className="relative z-10 flex flex-col items-center gap-3">
+              
+              <div className="text-3xl text-gray-400 group-hover:text-white transition">
+                {skill.icon}
+              </div>
+
+              <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
+                {skill.name}
+              </p>
+
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+  ))}
+
+</div>
+    ],
+  },
 ];
   return (
    <div className="relative bg-transparent text-white overflow-hidden">
@@ -144,30 +200,46 @@ function App() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
       
-         {skills.map((skill, i) => (
-       <div
-  key={i}
-  className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
->
-  
-  {/* Glow layer */}
-  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+        <div className="space-y-12">
 
-  {/* Content */}
- <div className="relative z-10 flex flex-col items-center gap-3">
-  <div className="text-3xl text-gray-400 group-hover:text-white transition">
-    {skill.icon}
-  </div>
+  {skillCategories.map((category, i) => (
+    <div key={i}>
 
-  <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
-    {skill.name}
-  </p>
-</div>
+      <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
+        {category.title}
+      </h3>
 
-</div>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+        {category.skills.map((skill, j) => (
+          <div
+            key={j}
+            className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
+          >
+            
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+
+            <div className="relative z-10 flex flex-col items-center gap-3">
+              
+              <div className="text-3xl text-gray-400 group-hover:text-white transition">
+                {skill.icon}
+              </div>
+
+              <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
+                {skill.name}
+              </p>
+
+            </div>
+
+          </div>
         ))}
 
-         </div>
+      </div>
+
+    </div>
+  ))}
+
+</div>
          <div className="mt-10 flex justify-center">
   <HoverButton onClick={() => window.location.href = "#projects"}>
     View Projects →
