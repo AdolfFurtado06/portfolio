@@ -64,46 +64,7 @@ const skillCategories = [
   {
     title: "Tools",
     skills: [
-      { name: "Git", icon: <FaGitAlt /> }<div className="space-y-12">
-
-  {skillCategories.map((category, i) => (
-    <div key={i}>
-
-      <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
-        {category.title}
-      </h3>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-
-        {category.skills.map((skill, j) => (
-          <div
-            key={j}
-            className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
-          >
-            
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
-
-            <div className="relative z-10 flex flex-col items-center gap-3">
-              
-              <div className="text-3xl text-gray-400 group-hover:text-white transition">
-                {skill.icon}
-              </div>
-
-              <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
-                {skill.name}
-              </p>
-
-            </div>
-
-          </div>
-        ))}
-
-      </div>
-
-    </div>
-  ))}
-
-</div>
+      { name: "Git", icon: <FaGitAlt /> },
     ],
   },
 ];
@@ -172,7 +133,6 @@ const skillCategories = [
 
   </div>
 </section>
-
       {/* ABOUT SECTION */}
       <section id="about" className="min-h-screen flex items-center justify-center px-6">
         <motion.div
@@ -191,64 +151,65 @@ const skillCategories = [
       </section>
 
       {/* SKILLS SECTION */}
-      <section id="skills" className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-5xl w-full text-center">
-    
-        <h2 className="text-3xl md:text-5xl font-semibold mb-12">
-          Skills
-        </h2>
+ {/* SKILLS SECTION */}
+<section id="skills" className="min-h-screen flex items-center justify-center px-6">
+  <div className="max-w-5xl w-full text-center">
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-      
-        <div className="space-y-12">
+    <h2 className="text-3xl md:text-5xl font-semibold mb-12">
+      Skills
+    </h2>
 
-  {skillCategories.map((category, i) => (
-    <div key={i}>
+    <div className="space-y-12">
 
-      <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
-        {category.title}
-      </h3>
+      {skillCategories.map((category, i) => (
+        <div key={i}>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <h3 className="text-xl md:text-2xl font-medium mb-6 text-gray-300">
+            {category.title}
+          </h3>
 
-        {category.skills.map((skill, j) => (
-          <div
-            key={j}
-            className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
-          >
-            
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 
-            <div className="relative z-10 flex flex-col items-center gap-3">
-              
-              <div className="text-3xl text-gray-400 group-hover:text-white transition">
-                {skill.icon}
+            {category.skills.map((skill, j) => (
+              <div
+                key={j}
+                className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
+              >
+                
+                {/* Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 blur-xl"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center gap-3">
+                  
+                  <div className="text-3xl text-gray-400 group-hover:text-white transition">
+                    {skill.icon}
+                  </div>
+
+                  <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
+                    {skill.name}
+                  </p>
+
+                </div>
+
               </div>
-
-              <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
-                {skill.name}
-              </p>
-
-            </div>
+            ))}
 
           </div>
-        ))}
 
-      </div>
+        </div>
+      ))}
 
     </div>
-  ))}
 
-</div>
-         <div className="mt-10 flex justify-center">
-  <HoverButton onClick={() => window.location.href = "#projects"}>
-    View Projects →
-  </HoverButton>
-</div>
+    <div className="mt-10 flex justify-center">
+      <HoverButton onClick={() => window.location.href = "#projects"}>
+        View Projects →
+      </HoverButton>
+    </div>
 
-          </div>
-        </section>
-
+  </div>
+</section>
         {/* PROJECTS SECTION */}
 <section id="projects" className="min-h-screen flex items-center justify-center px-6">
   <div className="text-center">
