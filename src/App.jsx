@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import HoverButton from "./components/HoverButton";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaPython } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaPython, FaGithub } from "react-icons/fa";
+import { SiTailwindcss, SiPostgresql, SiVisualstudiocode, SiVercel } from "react-icons/si";
 import StreakBackground from "./components/StreakBackground";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -62,11 +62,14 @@ const skillCategories = [
     ],
   },
   {
-    title: "Tools",
-    skills: [
-      { name: "Git", icon: <FaGitAlt /> },
-    ],
-  },
+  title: "Tools",
+  skills: [
+    { name: "Git", icon: <FaGitAlt /> },
+    { name: "GitHub", icon: <FaGithub /> },
+    { name: "VS Code", icon: <SiVisualstudiocode /> },
+    { name: "Vercel", icon: <SiVercel /> }, 
+  ],
+}
 ];
   return (
    <div className="relative bg-transparent text-white overflow-hidden">
