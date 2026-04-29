@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import HoverButton from "./components/HoverButton";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaPython } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql, SiVisualstudiocode, SiVercel } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaPython, FaCode } from "react-icons/fa";
+import { SiTailwindcss, SiPostgresql, SiVercel } from "react-icons/si";
 import StreakBackground from "./components/StreakBackground";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -66,7 +66,7 @@ const skillCategories = [
   skills: [
     { name: "Git", icon: <FaGitAlt /> },
     { name: "GitHub", icon: <FaGithub /> },
-    { name: "VS Code", icon: <SiVisualstudiocode /> },
+    { name: "VS Code", icon: <FaCode /> },
     { name: "Vercel", icon: <SiVercel /> }, 
   ],
 }
