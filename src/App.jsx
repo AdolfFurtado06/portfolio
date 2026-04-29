@@ -196,12 +196,12 @@ function App() {
 <section id="contact" className="min-h-screen flex items-center justify-center px-6">
   <div className="text-center max-w-xl">
 
-   <h2 className="text-3xl md:text-5xl font-semibold mb-6 tracking-wide">
-  Let’s work{" "}
-  <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-    together!
-  </span>
-</h2>
+    <h2 className="text-3xl md:text-5xl font-semibold mb-6 tracking-wide">
+      Let’s work{" "}
+      <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+        together!
+      </span>
+    </h2>
 
     <p className="text-gray-400 mb-8">
       Feel free to reach out for collaborations or just a friendly hello 👋
@@ -209,45 +209,43 @@ function App() {
 
     {/* Email Button */}
     <a href="mailto:furtado.adolf06@gmail.com">
-  <HoverButton>Say Hello</HoverButton>
-</a>
+      <HoverButton>Say Hello</HoverButton>
+    </a>
 
     {/* Social Links */}
- {/* Social Links */}
-<div className="flex justify-center gap-8 mt-8 text-gray-400 text-2xl">
+    <div className="flex justify-center gap-8 mt-8 text-gray-400 text-2xl">
 
-  <a 
-    href="https://github.com/AdolfFurtado06"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition duration-300 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_white]"
-  >
-    <FaGithub />
-  </a>
+      <a 
+        href="https://github.com/AdolfFurtado06"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition duration-300 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_white]"
+      >
+        <FaGithub />
+      </a>
 
-  <a 
-    href="https://www.linkedin.com/in/adolf-furtado-9857a3357"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition duration-300 hover:text-[#0A66C2] hover:scale-110 hover:drop-shadow-[0_0_8px_#0A66C2]"
-  >
-    <FaLinkedin />
-  </a>
+      <a 
+        href="https://www.linkedin.com/in/adolf-furtado-9857a3357"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition duration-300 hover:text-[#0A66C2] hover:scale-110 hover:drop-shadow-[0_0_8px_#0A66C2]"
+      >
+        <FaLinkedin />
+      </a>
 
-  <a 
-    href="https://www.instagram.com/adolf_furtado/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transition duration-300 hover:text-pink-500 hover:scale-110 hover:drop-shadow-[0_0_8px_#ec4899]"
-  >
-    <FaInstagram />
-  </a>
+      <a 
+        href="https://www.instagram.com/adolf_furtado/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition duration-300 hover:text-pink-500 hover:scale-110 hover:drop-shadow-[0_0_8px_#ec4899]"
+      >
+        <FaInstagram />
+      </a>
 
-</div>
+    </div>
 
   </div>
 </section>
-
     </div>
   );
 }
