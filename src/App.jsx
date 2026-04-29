@@ -47,29 +47,29 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML", icon: <FaHtml5 /> },
-      { name: "CSS", icon: <FaCss3Alt /> },
-      { name: "JavaScript", icon: <FaJs /> },
-      { name: "React", icon: <FaReact /> },
-      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
+      { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+      { name: "React", icon: <FaReact className="text-cyan-400" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-300" /> },
     ],
   },
   {
-    title: "Backend / Languages",
+   title: "Backend",
     skills: [
-      { name: "Python", icon: <FaPython /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "Python", icon: <FaPython className="text-yellow-300" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
     ],
   },
   {
-  title: "Tools",
-  skills: [
-    { name: "Git", icon: <FaGitAlt /> },
-    { name: "GitHub", icon: <FaGithub /> },
-    { name: "VS Code", icon: <FaCode /> },
-    { name: "Vercel", icon: <SiVercel /> }, 
-  ],
-}
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+      { name: "GitHub", icon: <FaGithub className="text-white" /> },
+      { name: "VS Code", icon: <FaCode className="text-blue-400" /> },
+      { name: "Vercel", icon: <SiVercel /> },
+    ],
+  },
 ];
   return (
    <div className="relative bg-transparent text-white overflow-hidden">
@@ -174,9 +174,13 @@ const skillCategories = [
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 
             {category.skills.map((skill, j) => (
-              <div
+             <motion.div
                 key={j}
-                className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
+                 initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: j * 0.1 }}
+                 viewport={{ once: true }}
+                 className="relative p-6 bg-[#1a1a1a] rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300 hover:scale-105 hover:bg-[#1f1f1f]"
               >
                 
                 {/* Glow */}
@@ -184,18 +188,20 @@ const skillCategories = [
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center gap-3">
-                  
-                  <div className="text-3xl text-gray-400 group-hover:text-white transition">
-                    {skill.icon}
+
+                  {/* Icon */}
+                    <div className="text-3xl transition group-hover:scale-110 relative">
+                      {skill.icon}
+
+                     {/* Tooltip */}
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs bg-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                      {skill.name}
+                    </span>
+                   </div>
+
                   </div>
 
-                  <p className="text-sm font-medium text-gray-300 group-hover:text-white transition">
-                    {skill.name}
-                  </p>
-
-                </div>
-
-              </div>
+              </motion.div>
             ))}
 
           </div>
