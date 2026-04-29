@@ -4,6 +4,7 @@ import HoverButton from "./components/HoverButton";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import StreakBackground from "./components/StreakBackground";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function TypingText({ words }) {
   const [text, setText] = useState("");
@@ -212,33 +213,34 @@ function App() {
 </a>
 
     {/* Social Links */}
-   <div className="flex justify-center gap-6 mt-8 text-gray-400">
+ {/* Social Links */}
+<div className="flex justify-center gap-8 mt-8 text-gray-400 text-2xl">
 
   <a 
     href="https://github.com/AdolfFurtado06"
     target="_blank"
     rel="noopener noreferrer"
-    className="hover:text-white transition"
+    className="transition duration-300 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_white]"
   >
-    GitHub
+    <FaGithub />
   </a>
 
   <a 
     href="https://www.linkedin.com/in/adolf-furtado-9857a3357"
     target="_blank"
     rel="noopener noreferrer"
-    className="hover:text-white transition"
+    className="transition duration-300 hover:text-[#0A66C2] hover:scale-110 hover:drop-shadow-[0_0_8px_#0A66C2]"
   >
-    LinkedIn
+    <FaLinkedin />
   </a>
 
   <a 
     href="https://www.instagram.com/adolf_furtado/"
     target="_blank"
     rel="noopener noreferrer"
-    className="hover:text-white transition"
+    className="transition duration-300 hover:text-pink-500 hover:scale-110 hover:drop-shadow-[0_0_8px_#ec4899]"
   >
-    Instagram
+    <FaInstagram />
   </a>
 
 </div>
